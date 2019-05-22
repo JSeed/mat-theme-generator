@@ -14,3 +14,5 @@ export interface Palette {
   A400: string;
   A700: string;
 }
+
+export type PaletteType = 'primary' | 'accent' | 'warn';
