@@ -1,0 +1,10 @@
+form {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+label {
+  text-align: right;
+  vertical-align: center;
+}
