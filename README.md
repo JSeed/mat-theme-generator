@@ -1,5 +1,7 @@
 # MatThemeBuilder
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/853a90a3-e25a-4382-99a7-e0389500c3f7/deploy-status)](https://app.netlify.com/sites/mtb-jseed/deploys)  
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
