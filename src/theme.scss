@@ -1,0 +1,108 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$gen-primary: (
+  50: var(--gen-primary-50),
+  100: var(--gen-primary-100),
+  200: var(--gen-primary-200),
+  300: var(--gen-primary-300),
+  400: var(--gen-primary-400),
+  500: var(--gen-primary-500),
+  600: var(--gen-primary-600),
+  700: var(--gen-primary-700),
+  800: var(--gen-primary-800),
+  900: var(--gen-primary-900),
+  A100: var(--gen-primary-A100),
+  A200: var(--gen-primary-A200),
+  A400: var(--gen-primary-A400),
+  A700: var(--gen-primary-A700),
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$gen-accent: (
+  50: var(--gen-accent-50),
+  100: var(--gen-accent-100),
+  200: var(--gen-accent-200),
+  300: var(--gen-accent-300),
+  400: var(--gen-accent-400),
+  500: var(--gen-accent-500),
+  600: var(--gen-accent-600),
+  700: var(--gen-accent-700),
+  800: var(--gen-accent-800),
+  900: var(--gen-accent-900),
+  A100: var(--gen-accent-A100),
+  A200: var(--gen-accent-A200),
+  A400: var(--gen-accent-A400),
+  A700: var(--gen-accent-A700),
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$gen-warn: (
+  50: var(--gen-warn-50),
+  100: var(--gen-warn-100),
+  200: var(--gen-warn-200),
+  300: var(--gen-warn-300),
+  400: var(--gen-warn-400),
+  500: var(--gen-warn-500),
+  600: var(--gen-warn-600),
+  700: var(--gen-warn-700),
+  800: var(--gen-warn-800),
+  900: var(--gen-warn-900),
+  A100: var(--gen-warn-A100),
+  A200: var(--gen-warn-A200),
+  A400: var(--gen-warn-A400),
+  A700: var(--gen-warn-A700),
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+$gen-primary-palette: mat-palette($gen-primary);
+$gen-accent-palette:  mat-palette($gen-accent, 500, 900, A100);
+$gen-warn-palette:    mat-palette($gen-warn);
+
+$gen-theme: mat-light-theme($gen-primary-palette, $gen-accent-palette, $gen-warn-palette);
+
+@include angular-material-theme($gen-theme);
