@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { startWith, takeUntil } from 'rxjs/operators';
+import { map, startWith, takeUntil } from 'rxjs/operators';
+import { PaletteService } from '../services/palette.service';
 
 @Component({
   selector: 'mtb-theme-builder',
@@ -16,6 +17,7 @@ export class ThemeBuilderComponent implements OnInit, OnDestroy {
 
   constructor(
     private fb: FormBuilder,
+    private paletteService: PaletteService,
   ) { }
 
   ngOnInit() {
@@ -28,9 +30,14 @@ export class ThemeBuilderComponent implements OnInit, OnDestroy {
 
     this.form.valueChanges.pipe(
       startWith(this.form.value),
+      map((value) => ({
+        primary: this.paletteService.generatePalette(value.primary),
+        accent: this.paletteService.generatePalette(value.accent),
+        warn: this.paletteService.generatePalette(value.warn),
+      })),
       takeUntil(this.destroyed),
-    ).subscribe(() => {
-      console.log('Theme:', this.form.value);
+    ).subscribe((theme) => {
+      console.log('Theme: ', theme);
     });
   }
 
