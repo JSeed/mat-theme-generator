@@ -1,12 +1,17 @@
-<form [formGroup]="form">
+<div class="builder-wrapper">
+  <form [formGroup]="form">
 
-  <label for="primary">Primary</label>
-  <input type="color" id="primary" formControlName="primary"/>
+    <label for="primary">Primary</label>
+    <input type="color" id="primary" formControlName="primary"/>
 
-  <label for="accent">Accent</label>
-  <input type="color" id="accent" formControlName="accent"/>
+    <label for="accent">Accent</label>
+    <input type="color" id="accent" formControlName="accent"/>
 
-  <label for="warn">Warn</label>
-  <input type="color" id="warn" formControlName="warn"/>
+    <label for="warn">Warn</label>
+    <input type="color" id="warn" formControlName="warn"/>
 
-</form>
+  </form>
+
+  <mtb-theme-output [theme]="theme"></mtb-theme-output>
+
+</div>

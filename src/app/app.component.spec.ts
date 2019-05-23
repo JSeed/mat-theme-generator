@@ -5,6 +5,7 @@ import { MaterialModule } from './material/material.module';
 import { ThemeBuilderComponent } from './theme-builder/theme-builder.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import {ThemeOutputComponent} from './theme-output/theme-output.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -19,6 +20,7 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderComponent,
         ThemeBuilderComponent,
+        ThemeOutputComponent,
       ],
     }).compileComponents();
   }));
