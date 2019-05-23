@@ -5,7 +5,11 @@ mat-toolbar-row {
   justify-content: space-between;
 }
 
-h1 {
+button {
+  margin-right: 16px;
+}
+
+.header-title {
   user-select: none;
 }
 

@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
-import { MatButtonModule, MatToolbarModule } from '@angular/material';
 import { MaterialModule } from '../material/material.module';
 
 describe('HeaderComponent', () => {
