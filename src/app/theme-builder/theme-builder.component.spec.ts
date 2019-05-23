@@ -4,6 +4,7 @@ import { ThemeBuilderComponent } from './theme-builder.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
+import {ThemeOutputComponent} from '../theme-output/theme-output.component';
 
 describe('ThemeBuilderComponent', () => {
 
@@ -18,7 +19,10 @@ describe('ThemeBuilderComponent', () => {
         MaterialModule,
         ReactiveFormsModule,
       ],
-      declarations: [ ThemeBuilderComponent ]
+      declarations: [
+        ThemeBuilderComponent,
+        ThemeOutputComponent,
+      ]
     })
     .compileComponents();
   }));

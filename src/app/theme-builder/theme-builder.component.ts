@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { map, startWith, takeUntil } from 'rxjs/operators';
 import { PaletteService } from '../services/palette.service';
 import {ThemeService} from '../services/theme.service';
+import {Theme} from '../model/theme';
 
 @Component({
   selector: 'mtb-theme-builder',
@@ -13,6 +14,7 @@ import {ThemeService} from '../services/theme.service';
 export class ThemeBuilderComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
+  theme: Theme;
 
   private destroyed = new Subject<void>();
 
@@ -38,7 +40,10 @@ export class ThemeBuilderComponent implements OnInit, OnDestroy {
         warn: this.paletteService.generatePalette(value.warn),
       })),
       takeUntil(this.destroyed),
-    ).subscribe((theme) => this.themeService.setTheme(theme));
+    ).subscribe((theme) => {
+      this.theme = theme;
+      this.themeService.setTheme(theme);
+    });
   }
 
   ngOnDestroy() {

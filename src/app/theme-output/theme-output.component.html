@@ -1,0 +1,34 @@
+<div class="code-wrapper">
+  <code>
+<pre>@import '~@angular/material/theming';
+@include mat-core();
+<ng-container *ngFor="let palette of theme | keyvalue">
+$theme-{{palette.key}}: (
+  <ng-container *ngFor="let item of palette.value | keyvalue">{{item.key}}: {{item.value}},
+  </ng-container>contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+</ng-container>
+$theme-primary-palette: mat-palette($theme-primary);
+$theme-accent-palette:  mat-palette($theme-accent, 500, 900, A100);
+$theme-warn-palette:    mat-palette($theme-warn);
+
+$theme: mat-light-theme($theme-primary-palette, $theme-accent-palette, $theme-warn-palette);
+
+@include angular-material-theme($theme);</pre>
+  </code>
+</div>
