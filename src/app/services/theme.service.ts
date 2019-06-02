@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Theme } from '../model/theme';
 import { Palette, PaletteType } from '../model/palette';
 import { FaviconService } from './favicon.service';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +11,7 @@ export class ThemeService {
   
   constructor(
     private favicon: FaviconService,
+    @Inject(DOCUMENT) private document: Document
   ) {}
   
   setTheme(theme: Theme) {
@@ -22,7 +24,7 @@ export class ThemeService {
   }
 
   private setCssVariable(name: string, value: string) {
-    document.body.style.setProperty(name, value);
+    this.document.body.style.setProperty(name, value);
   }
 }
 
