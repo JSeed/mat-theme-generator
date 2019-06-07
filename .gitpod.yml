@@ -3,4 +3,4 @@ ports:
   onOpen: open-browser
 tasks:
 - init: npm install
-  command: npm run start
+  command: npx ng serve --disable-host-check
