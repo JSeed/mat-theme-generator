@@ -106,3 +106,11 @@ $gen-warn-palette:    mat-palette($gen-warn);
 $gen-theme: mat-light-theme($gen-primary-palette, $gen-accent-palette, $gen-warn-palette);
 
 @include angular-material-theme($gen-theme);
+
+$gen-typography: mat-typography-config(
+  $font-family: var(--gen-font-family),
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include angular-material-typography($gen-typography);

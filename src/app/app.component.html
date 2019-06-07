@@ -1,5 +1,7 @@
 <div class="mat-typography mat-app-background">
   <mtb-header></mtb-header>
   <div class="content-wrapper">
+    <input [(ngModel)]="font">
+    <button mat-button (click)="setFont()">Button</button>
     <mtb-theme-builder></mtb-theme-builder>
 </div>
