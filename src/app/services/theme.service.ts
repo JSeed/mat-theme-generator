@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { Theme } from '../model/theme';
 import { Palette, PaletteType } from '../model/palette';
 import { FaviconService } from './favicon.service';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from "@angular/common";
 
 @Injectable({
   providedIn: 'root',
